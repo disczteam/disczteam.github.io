@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?8h3zl5");
+  src: url("fonts/icomoon.eot?8h3zl5#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?8h3zl5") format("truetype"), url("fonts/icomoon.woff?8h3zl5") format("woff"), url("fonts/icomoon.svg?8h3zl5#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-twitter2:before {
+  content: "";
+}
+
+.icon-linkedin:before {
+  content: "";
+}
+
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.main-container {
+  height: 100vh;
+  margin-bottom: 0 !important;
+  background-color: #07042F;
+}
+
+.logo-wrapper {
+  margin: 0 auto;
+}
+
+.text-wrapper {
+  display: block;
+  color: #ffffff;
+  padding: 2em;
+}
+
+.footer {
+  background-color: #ffffff;
+  height: 10vh;
+  margin-bottom: 0 !important;
+}
+
+.app-icon {
+  margin-top: 10%;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+}
+
+#download {
+  width: 118px;
+}
+
+#picture {
+  width: 170px;
+  margin-bottom: 40px;
+}
+
+span {
+  color: #4C34F7;
+}
+
+#name {
+  font-size: 2em;
+}
+
+#value-prop {
+  font-family: avenir black;
+  font-size: 36px;
+}
+
+p, h5 {
+  color: white;
+  font-family: "Avenir Black";
+  font-size: 1.5em;
+  line-height: 15px;
+  text-align: center;
+}
+
+.desc {
+  font-size: 1.4em;
+}
+
+.left-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 8px 20px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+}
+.left-button span {
+  color: #5634F6;
+}
+.left-button:hover {
+  text-decoration: none;
+  background: transparent;
+  border-radius: 0px;
+}
+.left-button:hover span {
+  color: white;
+}
+
+.social-media {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.social-media a {
+  margin-right: 5px;
+  color: #5634F6;
+}
+.social-media a:hover, .social-media a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+.social-media a:hover span, .social-media a:focus span {
+  color: white;
+}
+
+/*# sourceMappingURL=theme.css.map */

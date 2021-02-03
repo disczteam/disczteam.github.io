@@ -1,0 +1,186 @@
+//fonts
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?8h3zl5');
+  src:  url('fonts/icomoon.eot?8h3zl5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8h3zl5') format('truetype'),
+    url('fonts/icomoon.woff?8h3zl5') format('woff'),
+    url('fonts/icomoon.svg?8h3zl5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+  content: "\ea8d";
+}
+.icon-instagram:before {
+  content: "\ea90";
+}
+.icon-twitter2:before {
+  content: "\ea92";
+}
+.icon-linkedin:before {
+  content: "\eac8";
+}
+
+//Mixins
+@mixin grad-purple{
+  background: -webkit-linear-gradient(left top, #5634F6,  #DB8EC0, #FECAD2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #5634F6,  #DB8EC0, #FECAD2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right,#5634F6, #DB8EC0, #FECAD2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #5634F6, #DB8EC0, #FECAD2); /* Standard syntax */
+}
+
+@mixin grad-lightpink {
+	background: #ddd6f3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom right, #ddd6f3 , #faaca8); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom right, #ddd6f3 , #faaca8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin grad-blue {
+  background: -webkit-linear-gradient(left top, #4958D7, #a4abeb); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #5634F6, #a4abeb); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right,#5634F6, #a4abeb); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #5634F6, #a4abeb); /* Standard syntax */
+}
+
+@mixin grad-gray{
+  background: -webkit-linear-gradient(left top, rgba(138,138,138, 0.9), rgba(207,207,207, 0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(138,138,138, 0.9), rgba(207,207,207, 0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(138,138,138, 0.9), rgba(207,207,207, 0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(138,138,138, 0.9), rgba(207,207,207, 0.9)); /* Standard syntax */
+}
+
+
+//Animations
+
+// Variables
+$font-hd: 'Montserrat', sans-serif;
+$font-bt: 'Raleway', sans-serif;
+$purple:  #5634F6;
+$violet: #DB8EC0;
+$pink: #FECAD2;
+
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.main-container {
+	height: 100vh;
+	margin-bottom: 0 !important;
+	background-color: #07042F;
+}
+
+.logo-wrapper {
+	margin: 0 auto;
+}
+
+.text-wrapper {
+	display: block;
+	color: #ffffff;
+	padding: 2em;
+}
+
+.footer {
+	background-color: #ffffff;
+	height: 10vh;
+	margin-bottom: 0 !important;
+}
+
+.app-icon {
+	margin-top: 10%;
+}
+
+.logo {
+	margin: 0 auto;
+    display: block;
+}
+
+#download {
+	width: 118px;
+}
+
+#picture {
+	width: 170px;
+	margin-bottom: 40px;
+}
+
+span {
+	color: #4C34F7;
+}
+
+#name {
+	font-size: 2em;
+}
+
+#value-prop {
+	font-family: avenir black;
+	font-size: 36px;
+}
+
+p, h5 {
+	color: white;
+	font-family: 'Avenir Black';
+	font-size: 1.5em;
+	line-height: 15px;
+	text-align: center;
+}
+
+.desc {
+	font-size: 1.4em;
+}
+
+.left-button {
+	font-family: $font-hd;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 8px 20px;
+	background: white;
+	border-radius: 20px;
+	border: 2px solid white;
+	color: white;
+	span {
+		color: $purple;
+	}
+	&:hover  {
+		text-decoration: none;
+		background: transparent;
+		border-radius: 0px;
+		span {
+			color: white;
+		}
+	}
+}
+.social-media {
+	font-size: 18px;
+	margin-top: 20px;
+	a {
+		margin-right: 5px;
+		color: $purple;
+		&:hover, &:focus {
+			text-decoration: none;
+			cursor: pointer;
+			span {
+				color: white;
+			}
+		}
+	}
+}
