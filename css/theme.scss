@@ -83,14 +83,30 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+footer {
+	background-color: #302D51;
+	color: #ffffff;
+	height: 5vh;
+	margin-bottom: 0 !important;
+	.footer-text {
+		font-family: 'Avenir';
+		font-size: 14px;
+		padding: 10px;
+	}
+}
+
 .main-container {
-	height: 100vh;
+	height: 95vh;
 	margin-bottom: 0 !important;
 	background-color: #07042F;
 }
 
 .logo-wrapper {
 	margin: 0 auto;
+}
+
+.logo-text {
+	margin-bottom: 2em;
 }
 
 .text-wrapper {
