@@ -66,10 +66,6 @@ footer .footer-text {
   margin: 0 auto;
 }
 
-.logo-text {
-  margin-bottom: 2em;
-}
-
 .text-wrapper {
   display: block;
   color: #ffffff;
@@ -83,7 +79,7 @@ footer .footer-text {
 }
 
 .app-icon {
-  margin-top: 10%;
+  padding-top: 2em;
 }
 
 .logo {
