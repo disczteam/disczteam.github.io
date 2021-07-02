@@ -38,23 +38,62 @@
 	<!-- End Facebook Pixel Code -->
 </head>
 <body>
-	<div class="main-container container-fluid">
-	 	<div class="logo-wrapper app-icon">
-	 		<img srcset="appicon@3x.png 2x" class="logo"/>
+	<div class="row main-container">
+	 	<!-- left container -->
+		<div id="left-container" class="col s12 m6 fadeInLeft">
+			<div class="inner-text valign-wrapper">
+				<div class="center-align text-wrapper">
+					<img src="logo.png" id="picture"/>
+					<p class="desc" style="margin-top: 20px">Discover new music the swipe way</p>
+					<p class="desc" style="margin-top: 10px">& build playlists in seconds!</p>
+					<a href="https://apps.apple.com/us/app/discz-music-find-new-songs/id1521888879" rel="external" class="valign-wrapper download" style="margin-top: 20px">
+						<img class="app-store-btn" src="appstore.png"/>
+					</a>
+				    <p class="pics" style="margin-top: 50px">Looking for your Project 91 photos?</p>
+					<a href="https://apps.apple.com/us/app/discz-music-find-new-songs/id1521888879" rel="external" class="left-button download-button waves-effect waves-light valign-wrapper" style="margin-top: 10px">
+						<span class="valign">Get Project 91 Event Photos</span>
+					</a>
+					</br>
+					<a href="https://apps.apple.com/us/app/discz-music-find-new-songs/id1521888879" rel="external" class="left-button photos-button waves-effect waves-light valign-wrapper" style="margin-top: 10px">
+						<span class="valign">Check out Upcoming Events</span>
+					</a>
+					<div class="social-media">
+						<a href="https://www.instagram.com/rawfishproductions/" target="_blank">
+							<span class="icon-instagram"></span>
+							<span class="ig-handle">rawfishproductions</span>
+						</a>
+						<a href="https://www.instagram.com/project91events/" target="_blank">
+							<span class="icon-instagram"></span>
+							<span class="ig-handle">project91events</span>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="logo-wrapper logo-text">
-	 		<img srcset="logotext@3x.png 2x" class="logo"/>
+		<!-- right container -->
+		<div class="col s12 m6" id="right-container">
+			<div class="valign-wrapper video">
+				<div class="center-align text-wrapper">
+					<video class="demo-video valign" autoplay loop preload="true" muted playsinline src="demo.mp4">
+					</video>
+					<img class="device valign" src="iphone-frame.png" alt="device">
+					<h6 class="footer-text"> Discz Music LLC © 2021 </h6>
+				</div>
+			</div>
 		</div>
-		<div class="text-wrapper">
-			<h5 id="value-prop">Build a playlist in seconds!</h5>
-		</div>
-		<a href="https://apps.apple.com/us/app/discz/id1521888879" class="logo-wrapper">
-	 		<img srcset="download@3x.png 3x" class="logo" id="download"/>
-		</a>
 	</div>
-	<footer class="valign-wrapper">
-		<h6 class="footer-text"> Discz Music LLC © 2021 </h6>
-	</footer>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W3JR051V8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W3JR051V8');
+</script>
 </body>
 </html>
 
