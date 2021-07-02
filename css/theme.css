@@ -187,7 +187,7 @@ p, h5 {
 }
 #left-container .download img {
   margin: 0 auto;
-  width: calc(100% - 75%);
+  width: 170px;
 }
 #left-container .left-button {
   font-family: "Avenir", sans-serif;
