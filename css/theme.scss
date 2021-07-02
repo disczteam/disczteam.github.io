@@ -10,6 +10,8 @@
   font-style: normal;
 }
 
+@font-face { font-family: grifter; src: url('fonts/grifter.otf'); } 
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -37,13 +39,16 @@
 .icon-linkedin:before {
   content: "\eac8";
 }
+.icon-sphere:before {
+  content: "\e9c9";
+}
 
 //Mixins
 @mixin grad-purple{
-  background: -webkit-linear-gradient(left top, #5634F6,  #DB8EC0, #FECAD2); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #5634F6,  #DB8EC0, #FECAD2); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right,#5634F6, #DB8EC0, #FECAD2); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #5634F6, #DB8EC0, #FECAD2); /* Standard syntax */
+  background: -webkit-linear-gradient(left top, #5634F6, $molly, #9B5BEF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #5634F6, $molly, #9B5BEF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right,#5634F6, $molly, #9B5BEF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $molly, #5634F6, #9B5BEF); /* Standard syntax */
 }
 
 @mixin grad-lightpink {
@@ -53,7 +58,7 @@
 }
 
 @mixin grad-blue {
-  background: -webkit-linear-gradient(left top, #4958D7, #a4abeb); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left top, #5634F6, #a4abeb); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #5634F6, #a4abeb); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right,#5634F6, #a4abeb); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #5634F6, #a4abeb); /* Standard syntax */
@@ -66,15 +71,27 @@
   background: linear-gradient(to bottom right, rgba(138,138,138, 0.9), rgba(207,207,207, 0.9)); /* Standard syntax */
 }
 
+@mixin grad-left{
+  background: -webkit-linear-gradient(left top, #17115D, $pink); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #17115D, $pink); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right,#17115D, $pink); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #17115D, $pink); /* Standard syntax */
+}
 
 //Animations
 
 // Variables
-$font-hd: 'Montserrat', sans-serif;
-$font-bt: 'Raleway', sans-serif;
+$font-hd: 'Avenir Black', sans-serif;
+$font-bt: 'Avenir', sans-serif;
 $purple:  #5634F6;
 $violet: #DB8EC0;
-$pink: #FECAD2;
+$pink: #FF72FE;
+$molly: #5EFCFF;
+$rolling: #FF72FE;
+$headliner: #5C51FF;
+$midnight: #07042F;
+$underground: #302D51;
+$haze: #9492AE;
 
 img {
   image-rendering: auto;
@@ -83,23 +100,21 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
-footer {
-	background-color: #302D51;
-	color: #ffffff;
-	height: 5vh;
-	margin-bottom: 0 !important;
-	.footer-text {
-		font-family: 'Avenir';
-		font-size: 14px;
-		padding: 10px;
-		margin: 0 auto;
-	}
+.footer-text {
+	color: $haze;
+	font-family: 'Avenir';
+	font-size: 14px;
+	padding-top: 20px;
+	margin: 0 auto;
 }
 
-.main-container {
-	height: 95vh;
-	margin-bottom: 0 !important;
-	background-color: #07042F;
+html, body {
+	overflow: auto;
+}
+
+body {
+	background: $midnight;
+	height: 100vh;
 }
 
 .logo-wrapper {
@@ -131,13 +146,10 @@ footer {
 	width: 118px;
 }
 
-#picture {
-	width: 170px;
-	margin-bottom: 40px;
-}
-
-span {
-	color: #4C34F7;
+.social-media {
+	span {
+		color: white;
+	}
 }
 
 #name {
@@ -161,39 +173,174 @@ p, h5 {
 	font-size: 1.4em;
 }
 
-.left-button {
-	font-family: $font-hd;
-	font-size: 1em;
-	font-weight: bold;
-	padding: 8px 20px;
-	background: white;
-	border-radius: 20px;
-	border: 2px solid white;
-	color: white;
-	span {
-		color: $purple;
+.download-ios {
+	width: calc(100% - 200px);
+}
+
+.main-container {
+	margin-bottom: 0 !important;
+	height: 100%;
+	background: $midnight;
+}
+
+.text-wrapper {
+	margin: 0 auto;
+}
+
+#left-container {
+	height: 80vh;
+	background: $midnight;
+
+	@media only screen and (min-width: 601px) {
+		position: fixed;
+		float: left;
+		display: inline-block;
+		height: 100vh;
 	}
-	&:hover  {
-		text-decoration: none;
-		background: transparent;
-		border-radius: 0px;
+
+	@include grad-purple;
+	.inner-text {
+		height: 100%;
+		text-align: center;
+	}
+
+	#picture {
+		width: 170px;
+	}
+
+	#name {
+		font-size: 2em;
+	}
+
+	p {
+		color: white;
+		font-family: $font-hd;
+		font-size: 1.5em;
+		line-height: 15px;
+	}
+
+	.desc {
+		font-size: 1.4em;
+		font-family: grifter;
+		letter-spacing: 2px;
 		span {
-			color: white;
+			color: $molly;
 		}
 	}
-}
-.social-media {
-	font-size: 18px;
-	margin-top: 20px;
-	a {
-		margin-right: 5px;
-		color: $purple;
+
+	.pics {
+		font-size: 1em;
+		font-family: grifter;
+		letter-spacing: 1.5px;
+	}
+
+	.download {
+		img {
+			margin: 0 auto;
+			width: calc(100% - 75%);
+		}
+	}
+	.left-button {
+		font-family: $font-bt;
+		font-size: 1em;
+		font-weight: bold;
+		padding: 8px 20px;
 		&:hover, &:focus {
 			text-decoration: none;
 			cursor: pointer;
+		}
+	}
+	.download-button {
+		border: 2px solid $molly;
+		span {
+			color: $molly;
+		}
+				
+	}
+	.photos-button {
+		border: 2px solid $rolling;
+		span {
+			color: $rolling;
+		}
+
+	}
+	.social-media {
+		font-size: 18px;
+		margin-top: 20px;
+		a {
+			margin-right: 5px;
+			color: white;
 			span {
 				color: white;
 			}
+			&:hover, &:focus {
+				text-decoration: none;
+				cursor: pointer;
+				span {
+					color: $molly;
+				}
+			}
 		}
+		.ig-handle {
+			font-size: 12px;
+	    	bottom: 3px;
+	    	position: relative;
+	    	font-family: grifter;
+	    	letter-spacing: 1.5px;
+		}
+	}
+}
+
+#right-container {
+	float: right;
+	height: 100%;
+	background: $midnight;
+  	
+  	.video {
+  		margin-left: 0;
+  		margin-right: 0;
+  		width: 100%;
+  		height: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    position: relative;
+  	}
+
+  	.demo-video {
+  	    position: absolute;
+    	height: calc(100% - 200px);
+    	border-radius: 25px;
+	    left: 50%;
+	    top: 49.75%;
+	    -webkit-transform: translateY(-50%) translateX(-50%);
+	    transform: translateY(-50%) translateX(-50%);
+  	}
+
+	span {
+		font-family: $font-hd;
+		font-size: 1em;
+		color: $purple;
+	}
+
+	.title, .desc {
+		height: 100%;
+		display: inline-block;
+	}
+
+	.title {
+		padding-right: 50px;
+	}
+
+	p {
+		font-family: $font-bt;
+		font-size: 1em;
+	}
+
+	
+	.device {
+	    z-index: 1;
+        max-height: calc(100vh - 140px);
+	    width: auto;
+	    height: auto;
 	}
 }
