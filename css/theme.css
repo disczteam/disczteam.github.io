@@ -211,6 +211,12 @@ p, h5 {
 #left-container .photos-button span {
   color: #FF72FE;
 }
+#left-container .android-button {
+  border: 2px solid #32FFA6;
+}
+#left-container .android-button span {
+  color: #32FFA6;
+}
 #left-container .social-media {
   font-size: 18px;
   margin-top: 20px;

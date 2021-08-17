@@ -88,6 +88,7 @@ $violet: #DB8EC0;
 $pink: #FF72FE;
 $molly: #5EFCFF;
 $rolling: #FF72FE;
+$kandi: #32FFA6;
 $headliner: #5C51FF;
 $midnight: #07042F;
 $underground: #302D51;
@@ -261,6 +262,13 @@ p, h5 {
 		border: 2px solid $rolling;
 		span {
 			color: $rolling;
+		}
+
+	}
+	.android-button {
+		border: 2px solid $kandi;
+		span {
+			color: $kandi;
 		}
 
 	}
