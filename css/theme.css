@@ -193,6 +193,7 @@ p, h5 {
   font-family: "Avenir", sans-serif;
   font-size: 1em;
   font-weight: bold;
+  width: 200px;
   padding: 8px 20px;
 }
 #left-container .left-button:hover, #left-container .left-button:focus {
