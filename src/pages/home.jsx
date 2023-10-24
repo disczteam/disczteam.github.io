@@ -14,7 +14,7 @@ export const HomePage = () => (
     </a>
     <div className="absolute bottom-0 left-0 w-full flex flex-col sm:flex-row space-y-8 sm:space-y-0 items-center justify-between pb-12 px-12">
       <img src="/img/app_store_download.png" alt="app store download" className="h-12" />
-      <div className="flex space-x-8">
+      <div className="flex space-x-8 font-bold">
         <a href={DISCZ_IG} target="_blank" rel="noreferrer">
           Instagram
         </a>

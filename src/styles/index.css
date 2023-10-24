@@ -33,25 +33,36 @@
 
 @layer components {
   /* general components */
-  .icon-link {
-    @apply rounded-full w-10 h-10 bg-zinc-100 flex items-center justify-center transition duration-300 ease-in-out hover:scale-110;
+  .fade-out-image {
+    /* Apply a mask to the image using a gradient. The mask starts as fully opaque (black) at the top
+       and becomes fully transparent at the bottom, creating a fade-out effect. */
+
+    /* For Webkit browsers like Chrome and Safari */
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+
+    /* Standard way to apply mask for most modern browsers */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
-  .container {
-    @apply rounded-md shadow-md p-6 dark:border-2;
+
+  .floating-bar {
+    background: linear-gradient(180deg, rgba(42, 45, 50, 0.75) 0%, rgba(19, 19, 19, 0.75) 99.17%);
+    background-blend-mode: overlay;
   }
-  .pill {
-    @apply text-xs font-bold rounded-full bg-violet-400 text-white px-2 py-1 shadow-md;
+
+  .fade-in {
+    @apply opacity-0;
+    animation: fadeIn 2s forwards;
   }
-  .btn-primary {
-    @apply text-sm disabled:pointer-events-none rounded-md p-2 shadow-md bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white transition;
-  }
-  .btn-danger {
-    @apply text-sm disabled:pointer-events-none rounded-md p-2 shadow-md bg-red-500 hover:bg-red-600 text-white transition;
-  }
-  .btn-secondary {
-    @apply text-sm disabled:pointer-events-none disabled:opacity-50 bg-zinc-200 hover:bg-zinc-300 rounded-md p-2 shadow-md dark:bg-zinc-700 dark:hover:bg-zinc-600 transition;
-  }
-  .alternating-bg {
-    @apply even:bg-zinc-50 even:dark:bg-zinc-700 bg-zinc-100 dark:bg-zinc-800;
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 }
